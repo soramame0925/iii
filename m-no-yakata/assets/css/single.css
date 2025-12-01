@@ -46,13 +46,13 @@ body.single,
 
 /* 各セクションカード（スマホでのカード状表示と影） */
 .mno-pm-article__section {
-  /* background: #ffffff; */
-  /* border-radius: 12px; */
-  /* padding: 24px; */
-  /* box-shadow: 0 12px 32px rgba(17, 24, 39, 0.08); */
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 12px 32px rgba(17, 24, 39, 0.08);
   max-width: 100%;
   overflow-x: hidden;
-         box-sizing: border-box;
+	 box-sizing: border-box;
 }
 
 /* ギャラリー以外のセクション余白をスマホ基準でリセット */
@@ -72,11 +72,11 @@ body.single,
 
 /* セクション見出し（スマホでも視認性を保つ左ライン） */
 .mno-pm-article__section h2 {
-  /* font-size: 1.4rem; */
-  /* margin-bottom: 16px; */
-  /* border-left: 4px solid #f38ad5; */
-  /* padding-left: 12px; */
-  /* line-height: 1.3; */
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  border-left: 4px solid #f38ad5;
+  padding-left: 12px;
+  line-height: 1.3;
 }
 
 /* 音声プレイヤー（スマホ幅いっぱいにフィット） */
@@ -186,12 +186,12 @@ body.single,
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  /* background: rgba(15, 23, 42, 0.7); */
-  /* color: #fff; */
+  background: rgba(15, 23, 42, 0.7);
+  color: #fff;
   border: none;
   width: 40px;
   height: 40px;
-  /* border-radius: 999px; */
+  border-radius: 999px;
   display: grid;
   place-items: center;
   cursor: pointer;
@@ -207,9 +207,9 @@ body.single,
   transform: translateY(-50%);
   width: 36px;
   height: 36px;
-  /* border-radius: 50%; */
-  /* background: rgba(0, 0, 0, 0.35); */
-  /* color: rgba(255, 255, 255, 0.85); */
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.35);
+  color: rgba(255, 255, 255, 0.85);
   box-shadow: 0 6px 16px rgba(15, 23, 42, 0.2);
   display: grid;
   place-items: center;
@@ -218,14 +218,14 @@ body.single,
   padding: 0;
 }
 
-/* .mno-gallery .slick-prev:hover,
+.mno-gallery .slick-prev:hover,
 .mno-gallery .slick-prev:focus-visible,
 .mno-gallery .slick-next:hover,
 .mno-gallery .slick-next:focus-visible,
 .mno-gallery-arrow:hover,
 .mno-gallery-arrow:focus-visible {
   background: rgba(0, 0, 0, 0.55);
-} */
+}
 
 .mno-gallery-arrow--left {
   left: 8px;
@@ -240,10 +240,10 @@ body.single,
 }
 
 /* 作品スライダー矢印のホバー時カラー強調 */
-/* .mno-pm-slider__nav:not(.mno-gallery-arrow):hover,
+.mno-pm-slider__nav:not(.mno-gallery-arrow):hover,
 .mno-pm-slider__nav:not(.mno-gallery-arrow):focus {
   background: rgba(236, 72, 153, 0.9);
-} */
+}
 
 /* 前へ矢印の配置 */
 .mno-pm-slider__nav--prev {
@@ -270,17 +270,17 @@ body.single,
 .mno-pm-slider__dot {
   width: 10px;
   height: 10px;
-  /* border-radius: 999px; */
-  /* background: rgba(255, 255, 255, 0.5); */
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.5);
   border: none;
   padding: 0;
   cursor: pointer;
 }
 
 /* アクティブドットの色分け */
-/* .mno-pm-slider__dot.is-active {
+.mno-pm-slider__dot.is-active {
   background: #f38ad5;
-} */
+}
 
 /* 購入セクション全体（スマホでは縦に積む） */
 .mno-pm-article__purchase {
@@ -298,19 +298,19 @@ body.single,
   justify-content: center;
   text-align: center;
   gap: 4px;
-  /* padding: 14px 16px; */
+  padding: 14px 16px;
   margin: 0;
-  /* border-radius: 18px; */
-  /* border: 1px solid #e5e7eb; */
-  /* background: #fff; */
-  /* box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); */
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
   width: 100%;
 }
 
 /* セール価格表示（スマホでも大きく強調） */
 .mno-pm-price__sale {
-  /* font-size: clamp(1.8rem, 6vw, 2.3rem); */
-  /* color: #dc2626; */
+  font-size: clamp(1.8rem, 6vw, 2.3rem);
+  color: #dc2626;
   font-weight: 700;
   display: flex;
   flex-wrap: wrap;
@@ -318,7 +318,7 @@ body.single,
   justify-content: center;
   gap: 6px;
   margin: 0;
-  /* line-height: 1.1; */
+  line-height: 1.1;
 }
 
 /* セールラベル（小さなピル型バッジ） */
@@ -326,10 +326,10 @@ body.single,
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  /* background: #fee2e2; */
-  /* color: #b91c1c; */
-  /* padding: 2px 12px; */
-  /* border-radius: 999px; */
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 2px 12px;
+  border-radius: 999px;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -337,24 +337,24 @@ body.single,
 
 /* 通常価格（スマホで折り返しても見やすい控えめ表示） */
 .mno-pm-price__normal {
-  /* font-size: 0.95rem; */
-  /* color: #9ca3af; */
-  /* text-decoration: line-through; */
+  font-size: 0.95rem;
+  color: #9ca3af;
+  text-decoration: line-through;
   margin: 0;
 }
 
 /* 通常価格のみ表示時の強調スタイル */
 .mno-pm-price__normal--only {
-  /* text-decoration: none; */
+  text-decoration: none;
   font-weight: 600;
-  /* color: #111827; */
-  /* font-size: 1.2rem; */
+  color: #111827;
+  font-size: 1.2rem;
 }
 
 /* セール終了文言（スマホで注意喚起する赤文字） */
 .mno-pm-price__end {
-  /* font-size: 0.9rem; */
-  /* color: #dc2626; */
+  font-size: 0.9rem;
+  color: #dc2626;
   font-weight: 600;
   margin: 6px 0 0;
   letter-spacing: 0.04em;
@@ -369,31 +369,31 @@ body.single,
   width: 100%;
   max-width: 100%;
   min-height: 48px;
-  /* padding: 14px 18px; */
-  /* font-size: 1rem; */
+  padding: 14px 18px;
+  font-size: 1rem;
   font-weight: 700;
-  /* border-radius: 14px; */
-  /* background: linear-gradient(135deg, #f38ad5, #6366f1); */
-  /* color: #fff; */
+  border-radius: 14px;
+  background: linear-gradient(135deg, #f38ad5, #6366f1);
+  color: #fff;
   text-decoration: none;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  /* box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3); */
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
   box-sizing: border-box;
 }
 
 /* 購入ボタンのホバー・フォーカス演出 */
-/* .mno-pm-buy-button:hover,
+.mno-pm-buy-button:hover,
 .mno-pm-buy-button:focus {
   transform: translateY(-2px);
   box-shadow: 0 16px 32px rgba(236, 72, 153, 0.4);
-} */
+}
 
 /* 購入不可状態のボタン */
 .mno-pm-buy-button--disabled {
   opacity: 0.5;
   cursor: not-allowed;
   box-shadow: none;
-  /* background: #9ca3af; */
+  background: #9ca3af;
 }
 
 /* PC表示用：購入エリアを横並びに変更 */
@@ -1158,296 +1158,4 @@ html, body {
 /* ライトボックス開閉時に背面スクロールを止める */
 body.mno-gallery-lightbox-open {
   overflow: hidden;
-}
-
-/* ===================== */
-/* New single-page theme */
-/* ===================== */
-
-.single .mno-single,
-body.single .mno-single,
-.mno-single {
-  background: #121212;
-  color: #e0e0e0;
-  padding: 32px 18px 96px;
-  line-height: 1.7;
-}
-
-.single .mno-pm-article,
-body.single .mno-pm-article {
-  gap: 36px;
-}
-
-.single .mno-pm-article__section,
-body.single .mno-pm-article__section {
-  background: #1a1a1a;
-  border-radius: 14px;
-  padding: 28px;
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.single .mno-pm-article__section h2,
-body.single .mno-pm-article__section h2 {
-  font-size: 1.5rem;
-  margin-bottom: 18px;
-  padding-left: 14px;
-  border-left: 4px solid #82103f;
-  color: #e0e0e0;
-}
-
-.single .mno-pm-article__section p,
-body.single .mno-pm-article__section p,
-.single .mno-pm-article__section li,
-body.single .mno-pm-article__section li {
-  color: #a5a5a5;
-  font-size: 1.02rem;
-}
-
-.single .mno-pm-article__section strong,
-body.single .mno-pm-article__section strong {
-  color: #e0e0e0;
-}
-
-.single .mno-pm-article__section em,
-body.single .mno-pm-article__section em {
-  color: #8b8b8b;
-}
-
-.single .mno-pm-article__section a,
-body.single .mno-pm-article__section a {
-  color: #82103f;
-}
-
-.single .mno-pm-article__purchase,
-body.single .mno-pm-article__purchase {
-  gap: 18px;
-}
-
-.single .mno-pm-price,
-body.single .mno-pm-price {
-  background: #181818;
-  border-radius: 16px;
-  padding: 18px 20px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
-  color: #e0e0e0;
-}
-
-.single .mno-pm-price__sale,
-body.single .mno-pm-price__sale {
-  color: #e0e0e0;
-  line-height: 1.2;
-}
-
-.single .mno-pm-price__label,
-body.single .mno-pm-price__label {
-  background: rgba(130, 16, 63, 0.18);
-  color: #e0e0e0;
-  padding: 4px 14px;
-  border-radius: 999px;
-}
-
-.single .mno-pm-price__normal,
-body.single .mno-pm-price__normal {
-  color: #8b8b8b;
-}
-
-.single .mno-pm-price__normal--only,
-body.single .mno-pm-price__normal--only {
-  color: #e0e0e0;
-}
-
-.single .mno-pm-price__end,
-body.single .mno-pm-price__end {
-  color: #82103f;
-}
-
-.single .mno-pm-buy-button,
-body.single .mno-pm-buy-button {
-  background: #82103f;
-  color: #e0e0e0;
-  border-radius: 16px;
-  padding: 16px 20px;
-  box-shadow: 0 10px 26px rgba(130, 16, 63, 0.35);
-  font-size: 1.02rem;
-}
-
-.single .mno-pm-buy-button:hover,
-body.single .mno-pm-buy-button:hover,
-.single .mno-pm-buy-button:focus,
-body.single .mno-pm-buy-button:focus {
-  background: #9a1b51;
-}
-
-.single .mno-pm-buy-button--disabled,
-body.single .mno-pm-buy-button--disabled {
-  background: #3a3a3a;
-}
-
-.single .mno-pm-track-list__item,
-body.single .mno-pm-track-list__item {
-  background: #1c1c1c;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  color: #a5a5a5;
-}
-
-.single .mno-pm-track-list__label,
-body.single .mno-pm-track-list__label,
-.single .mno-pm-track-list__count-label,
-body.single .mno-pm-track-list__count-label {
-  color: #e0e0e0;
-}
-
-.single .mno-pm-track-list__genres,
-body.single .mno-pm-track-list__genres {
-  color: #a5a5a5;
-}
-
-.single .mno-pm-list li span,
-body.single .mno-pm-list li span {
-  color: #e0e0e0;
-}
-
-.single .mno-pm-list,
-body.single .mno-pm-list {
-  gap: 16px;
-}
-
-.single .mno-data-label-text,
-body.single .mno-data-label-text,
-.single .mno-data-count,
-body.single .mno-data-count,
-.single .mno-voice-name,
-body.single .mno-voice-name {
-  color: #e0e0e0;
-}
-
-.single .mno-data-track,
-body.single .mno-data-track {
-  background: rgba(130, 16, 63, 0.15);
-  color: #e0e0e0;
-}
-
-.single .mno-data-bar-track,
-body.single .mno-data-bar-track {
-  background: #2a2a2a;
-}
-
-.single .mno-data-bar-fill,
-body.single .mno-data-bar-fill {
-  background: linear-gradient(90deg, #82103f, #b32564);
-}
-
-.single .mno-voice-row,
-body.single .mno-voice-row {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  color: #a5a5a5;
-}
-
-.single .mno-voice-row--header,
-body.single .mno-voice-row--header {
-  color: #e0e0e0;
-}
-
-.single .mno-voice-dot,
-body.single .mno-voice-dot {
-  border-color: #82103f;
-}
-
-.single .mno-voice-dot.is-active,
-body.single .mno-voice-dot.is-active {
-  background: #82103f;
-  border-color: #82103f;
-}
-
-.single .mno-level-chart,
-body.single .mno-level-chart {
-  background: #161616;
-  padding: 20px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.single .mno-level-chart::before,
-body.single .mno-level-chart::before {
-  background: linear-gradient(90deg, #2a2a2a, #3a3a3a);
-}
-
-.single .mno-level-dot,
-body.single .mno-level-dot {
-  border-color: #82103f;
-}
-
-.single .mno-level-dot.is-active,
-body.single .mno-level-dot.is-active {
-  background: #82103f;
-  border-color: #b32564;
-}
-
-.single .mno-level-label,
-body.single .mno-level-label {
-  color: #a5a5a5;
-}
-
-.single .mno-gallery,
-body.single .mno-gallery,
-.single .mno-pm-slider,
-body.single .mno-pm-slider {
-  background: #1a1a1a;
-  border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.single .mno-gallery img,
-body.single .mno-gallery img,
-.single .mno-pm-slider__image,
-body.single .mno-pm-slider__image {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 6px;
-}
-
-.single .mno-pm-slider__nav,
-body.single .mno-pm-slider__nav,
-.single .mno-gallery-arrow,
-body.single .mno-gallery-arrow {
-  background: rgba(0, 0, 0, 0.35);
-  color: #e0e0e0;
-  border-radius: 50%;
-}
-
-.single .mno-pm-slider__dot,
-body.single .mno-pm-slider__dot {
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.single .mno-pm-slider__dot.is-active,
-body.single .mno-pm-slider__dot.is-active {
-  background: #82103f;
-}
-
-.single .mno-gallery .slick-prev,
-body.single .mno-gallery .slick-prev,
-.single .mno-gallery .slick-next,
-body.single .mno-gallery .slick-next,
-.single .mno-gallery-arrow,
-body.single .mno-gallery-arrow {
-  background: rgba(0, 0, 0, 0.35);
-  color: #e0e0e0;
-  border-radius: 50%;
-}
-
-@media (max-width: 768px) {
-  .single .mno-single,
-  body.single .mno-single {
-    padding: 20px 14px 72px;
-  }
-
-  .single .mno-pm-article__section,
-  body.single .mno-pm-article__section {
-    padding: 22px;
-  }
 }
