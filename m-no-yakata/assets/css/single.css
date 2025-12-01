@@ -1,19 +1,3 @@
-/* ダークテーマ用カラー変数 */
-:root {
-  --mno-dark-body: #121212; /* 投稿ページ：ダークテーマ背景 */
-  --mno-dark-card: #1c1c1c; /* カード背景 */
-  --mno-dark-panel: #202020; /* セクション強調背景 */
-  --mno-dark-soft: #242424; /* ソフト背景 */
-  --mno-text-primary: #e6e6e6; /* 主要テキスト色 */
-  --mno-text-secondary: #d6d6d6; /* サブ本文色 */
-  --mno-text-meta: #a3a3a3; /* メタ情報色 */
-  --mno-border: rgba(255, 255, 255, 0.12); /* 繊細なボーダー */
-  --mno-border-strong: rgba(255, 255, 255, 0.15); /* 強調ボーダー */
-  --mno-shadow: 0 12px 32px rgba(0, 0, 0, 0.35); /* ダークテーマ用影 */
-  --mno-accent: #c8a44d; /* アクセントカラー（ゴールド） */
-  --mno-accent-strong: #b78935; /* 濃いめのゴールド */
-}
-
 /* 投稿ページ全体ラッパー（スマホ基準で横幅と横スクロールを抑制） */
 .single,
 body.single,
@@ -21,8 +5,6 @@ body.single,
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
-  background: var(--mno-dark-body);
-  color: var(--mno-text-primary);
 }
 
 /* シングルページの内側コンテナ（スマホでも中央に収める余白設定） */
@@ -30,7 +12,6 @@ body.single,
   max-width: 960px;
   margin: 0 auto;
   padding: 24px 16px 80px;
-  background: var(--mno-dark-body);
 }
 
 /* 汎用ラッパー（コンテンツが横に溢れないよう幅制御） */
@@ -53,7 +34,6 @@ body.single,
   font-size: clamp(0.95rem, 4vw, 1.125rem);
   margin: 0;
   line-height: 1.4;
-  color: #ffffff;
 }
 
 /* 記事セクション全体グリッド（スマホ縦並びレイアウト） */
@@ -64,27 +44,15 @@ body.single,
   overflow-x: hidden;
 }
 
-/* 投稿ページ：カード枠を廃止してフラット化 */
+/* 各セクションカード（スマホでのカード状表示と影） */
 .mno-pm-article__section {
-  background: transparent;
-  border-radius: 0;
+  background: #ffffff;
+  border-radius: 12px;
   padding: 24px;
-  box-shadow: none;
-  border: none;
+  box-shadow: 0 12px 32px rgba(17, 24, 39, 0.08);
   max-width: 100%;
   overflow-x: hidden;
-         box-sizing: border-box;
-}
-
-.mno-pm-article__section + .mno-pm-article__section {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-/* ダークテーマ用：本文とリストの可読性を向上 */
-.mno-pm-article__section p,
-.mno-pm-article__section li {
-  color: var(--mno-text-secondary);
-  line-height: 1.75;
+	 box-sizing: border-box;
 }
 
 /* ギャラリー以外のセクション余白をスマホ基準でリセット */
@@ -106,20 +74,17 @@ body.single,
 .mno-pm-article__section h2 {
   font-size: 1.4rem;
   margin-bottom: 16px;
-  border-left: 4px solid var(--mno-accent);
+  border-left: 4px solid #f38ad5;
   padding-left: 12px;
   line-height: 1.3;
-  color: #ffffff;
 }
 
 /* 音声プレイヤー（スマホ幅いっぱいにフィット） */
 .mno-pm-article__voice audio {
   width: 100%;
   border: none;
-  border-radius: 0;
-  background: transparent;
-  color: var(--mno-text-primary);
-  box-shadow: none;
+  border-radius: 12px;
+  background: #0b1021;
   min-height: 140px;
 }
 
@@ -131,9 +96,7 @@ body.single,
   border: none;
   display: block;
   margin: 0 auto 20px;
-  border-radius: 0;
-  background: transparent;
-  box-shadow: none;
+  border-radius: 8px;
 }
 
 /* ギャラリー・スライダー枠（スマホでも角丸を保ったカルーセル） */
@@ -141,7 +104,7 @@ body.single,
 .mno-gallery {
   position: relative;
   overflow: hidden;
-  border-radius: 0;
+  border-radius: 16px;
 }
 
 /* スワイプ可能なトラック（タッチ操作向けスクロールスナップ） */
@@ -181,7 +144,6 @@ body.single,
   height: auto;
   display: block;
 　cursor: zoom-in;
-  border-radius: 0;
 }
 
 /* モーション軽減設定への配慮 */
@@ -204,9 +166,9 @@ body.single,
 
   .mno-pm-article__section.mno-pm-article__gallery .mno-gallery {
     width: 100vw;
-        margin-left: calc(50% - 50vw);
+	margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
-    border-radius: 0;
+    border-radius: 6px;
   }
 
   .mno-pm-article__section.mno-pm-article__gallery .mno-gallery-slide {
@@ -215,7 +177,7 @@ body.single,
 
   .mno-pm-article__section.mno-pm-article__gallery .mno-gallery img {
     width: 100vw;
-    border-radius: 0;
+    border-radius: 6px;
   }
 }
 
@@ -224,8 +186,8 @@ body.single,
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.08);
-  color: #f7f7f7;
+  background: rgba(15, 23, 42, 0.7);
+  color: #fff;
   border: none;
   width: 40px;
   height: 40px;
@@ -235,7 +197,6 @@ body.single,
   cursor: pointer;
   transition: background 0.2s ease;
   z-index: 2;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
 /* ギャラリー矢印（タップしやすい半透明ボタン） */
 .mno-gallery .slick-prev,
@@ -247,9 +208,9 @@ body.single,
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.08);
-  color: #f3f3f3;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.35);
+  color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.2);
   display: grid;
   place-items: center;
   z-index: 10;
@@ -263,7 +224,7 @@ body.single,
 .mno-gallery .slick-next:focus-visible,
 .mno-gallery-arrow:hover,
 .mno-gallery-arrow:focus-visible {
-  background: rgba(200, 164, 77, 0.28);
+  background: rgba(0, 0, 0, 0.55);
 }
 
 .mno-gallery-arrow--left {
@@ -281,7 +242,7 @@ body.single,
 /* 作品スライダー矢印のホバー時カラー強調 */
 .mno-pm-slider__nav:not(.mno-gallery-arrow):hover,
 .mno-pm-slider__nav:not(.mno-gallery-arrow):focus {
-  background: rgba(200, 164, 77, 0.35);
+  background: rgba(236, 72, 153, 0.9);
 }
 
 /* 前へ矢印の配置 */
@@ -310,7 +271,7 @@ body.single,
   width: 10px;
   height: 10px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.5);
   border: none;
   padding: 0;
   cursor: pointer;
@@ -318,7 +279,7 @@ body.single,
 
 /* アクティブドットの色分け */
 .mno-pm-slider__dot.is-active {
-  background: var(--mno-accent);
+  background: #f38ad5;
 }
 
 /* 購入セクション全体（スマホでは縦に積む） */
@@ -339,17 +300,17 @@ body.single,
   gap: 4px;
   padding: 14px 16px;
   margin: 0;
-  border-radius: 0;
-  border: none;
-  background: transparent;
-  box-shadow: none;
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
   width: 100%;
 }
 
 /* セール価格表示（スマホでも大きく強調） */
 .mno-pm-price__sale {
   font-size: clamp(1.8rem, 6vw, 2.3rem);
-  color: var(--mno-accent);
+  color: #dc2626;
   font-weight: 700;
   display: flex;
   flex-wrap: wrap;
@@ -365,8 +326,8 @@ body.single,
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: rgba(200, 164, 77, 0.18);
-  color: #f3e7c5;
+  background: #fee2e2;
+  color: #b91c1c;
   padding: 2px 12px;
   border-radius: 999px;
   font-size: 0.75rem;
@@ -377,7 +338,7 @@ body.single,
 /* 通常価格（スマホで折り返しても見やすい控えめ表示） */
 .mno-pm-price__normal {
   font-size: 0.95rem;
-  color: var(--mno-text-meta);
+  color: #9ca3af;
   text-decoration: line-through;
   margin: 0;
 }
@@ -386,14 +347,14 @@ body.single,
 .mno-pm-price__normal--only {
   text-decoration: none;
   font-weight: 600;
-  color: var(--mno-text-secondary);
+  color: #111827;
   font-size: 1.2rem;
 }
 
 /* セール終了文言（スマホで注意喚起する赤文字） */
 .mno-pm-price__end {
   font-size: 0.9rem;
-  color: #9b1530;
+  color: #dc2626;
   font-weight: 600;
   margin: 6px 0 0;
   letter-spacing: 0.04em;
@@ -412,11 +373,11 @@ body.single,
   font-size: 1rem;
   font-weight: 700;
   border-radius: 14px;
-  background: linear-gradient(135deg, #c8a44d, #9b7b2a);
+  background: linear-gradient(135deg, #f38ad5, #6366f1);
   color: #fff;
   text-decoration: none;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
   box-sizing: border-box;
 }
 
@@ -424,7 +385,7 @@ body.single,
 .mno-pm-buy-button:hover,
 .mno-pm-buy-button:focus {
   transform: translateY(-2px);
-  box-shadow: 0 16px 36px rgba(200, 164, 77, 0.35);
+  box-shadow: 0 16px 32px rgba(236, 72, 153, 0.4);
 }
 
 /* 購入不可状態のボタン */
@@ -432,7 +393,7 @@ body.single,
   opacity: 0.5;
   cursor: not-allowed;
   box-shadow: none;
-  background: #4a4a4a;
+  background: #9ca3af;
 }
 
 /* PC表示用：購入エリアを横並びに変更 */
@@ -469,18 +430,13 @@ body.single,
 
 /* 各トラックの行カード（スマホで余白を確保） */
 .mno-pm-track-list__item {
-  background: transparent;
-  border: none;
-  border-radius: 0;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
   padding: 16px 18px;
   line-height: 1.7;
   display: grid;
   gap: 8px;
-  box-shadow: none;
-}
-
-.mno-pm-track-list__item:not(:last-child) {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* トラック見出し行（スマホでラベルと値を横並び） */
@@ -497,7 +453,7 @@ body.single,
 .mno-pm-track-list__label,
 .mno-pm-track-list__count-label {
   font-weight: 700;
-  color: #f7f7f7;
+  color: #111827;
   white-space: normal;
   overflow-wrap: anywhere;
 }
@@ -506,7 +462,7 @@ body.single,
 .mno-pm-track-list__name,
 .mno-pm-track-list__count-value,
 .mno-pm-track-list__genres {
-  color: var(--mno-text-secondary);
+  color: #1f2937;
 }
 
 /* ジャンルテキスト（スマホで少し大きめ） */
@@ -550,7 +506,7 @@ body.single,
 .mno-pm-list li span {
   min-width: 110px;
   font-weight: 600;
-  color: var(--mno-text-meta);
+  color: #6b7280;
 }
 
 /* 箇条書きリスト（スマホ向けドット表示） */
@@ -574,19 +530,18 @@ body.single,
 .mno-pm-list--numbered li span {
   min-width: auto;
   font-weight: 600;
-  color: var(--mno-text-secondary);
+  color: #111827;
 }
 
 /* セリフブロック全体のカード */
 .mno-dialogue-block {
   display: grid;
   gap: 16px;
-  background: transparent;
-  border-radius: 0;
+  background: #f8fafc;
+  border-radius: 14px;
   padding: 24px;
-  box-shadow: none;
-        border: none;
-          overflow-x: hidden;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+	overflow-x: hidden;
 }
 
 .mno-dialogue-image {
@@ -594,7 +549,7 @@ body.single,
   width: 100%;
   max-width: 100%;
   height: auto;
-  border-radius: 0;
+  border-radius: 8px;
   margin: 12px 0;
   object-fit: cover;
 }
@@ -603,13 +558,13 @@ body.single,
 .mno-dialogue-block h2 {
   margin: 0;
   font-size: 1.4rem;
-  color: #ffffff;
+  color: #111827;
 }
 
 /* トラック説明文 */
 .mno-dialogue-block__track-description {
   margin: 0;
-  color: var(--mno-text-secondary);
+  color: #374151;
   line-height: 1.8;
 }
 
@@ -620,7 +575,7 @@ body.single,
   display: grid;
   gap: 8px;
   list-style: none;
-  color: var(--mno-text-primary);
+  color: #1f2937;
 }
 
 /* サブ見出しリスト */
@@ -632,12 +587,12 @@ body.single,
 .mno-dialogue-block__subheadings h3 {
   margin: 0;
   font-size: 1.1rem;
-  color: #f8f8f8;
+  color: #111827;
 }
 
 /* セリフ本文 */
 .mno-dialogue-block__body {
-  color: var(--mno-text-secondary);
+  color: #111827;
   line-height: 1.8;
 }
 
@@ -646,12 +601,11 @@ body.single,
 }
 
 .mno-speech-text {
-  background: transparent;
-  border-left: 3px solid var(--mno-accent);
+  background: #f7f7f7;
+  border-left: 3px solid #c7a5b0;
   padding: 12px 14px;
-  border-radius: 0;
+  border-radius: 8px;
   line-height: 1.9;
-  color: var(--mno-text-primary);
 }
 
 /* データ表示セクション全体（スマホで縦並び） */
@@ -697,7 +651,7 @@ body.single,
 .mno-data-block h3 {
   font-size: 1.1rem;
   margin-bottom: 12px;
-  color: #ffffff;
+  color: #0f172a;
 }
 
 /* 棒グラフリスト（スマホで1列表示） */
@@ -735,7 +689,7 @@ body.single,
 
 /* ラベルテキスト（長文も折り返し） */
 .mno-data-label-text {
-  color: var(--mno-text-secondary);
+  color: #111827;
   overflow-wrap: anywhere;
 }
 
@@ -747,8 +701,8 @@ body.single,
   font-size: 0.85rem;
   padding: 2px 8px;
   border-radius: 999px;
-  background: rgba(200, 164, 77, 0.18);
-  color: var(--mno-accent);
+  background: #eef2ff;
+  color: #3730a3;
   max-width: 100%;
   overflow: hidden;
 }
@@ -759,7 +713,7 @@ body.single,
   position: relative;
   height: 12px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.12);
+  background: #e5e7eb;
   overflow: hidden;
   width: 100%;
   max-width: 100%;
@@ -773,7 +727,7 @@ body.single,
   bottom: 0;
   width: var(--mno-bar-width, 0%);
   max-width: 100%;
-  background: linear-gradient(90deg, #c8a44d, #9b7b2a);
+  background: linear-gradient(90deg, #f38ad5, #6366f1);
   border-radius: 999px;
 }
 
@@ -782,7 +736,7 @@ body.single,
   grid-area: count;
   font-size: 1rem;
   font-weight: 700;
-  color: var(--mno-text-primary);
+  color: #111827;
   text-align: right;
 }
 
@@ -801,7 +755,7 @@ body.single,
   gap: 12px;
   align-items: center;
   padding: 8px 0;
-  border-bottom: 1px solid var(--mno-border);
+  border-bottom: 1px solid #e5e7eb;
   width: 100%;
   max-width: 100%;
 }
@@ -809,7 +763,7 @@ body.single,
 /* ボイス表ヘッダー行 */
 .mno-voice-row--header {
   font-weight: 700;
-  color: #ffffff;
+  color: #0f172a;
 }
 
 /* ボイス種別のヘッダーセル */
@@ -819,13 +773,12 @@ body.single,
   text-align: center;
   white-space: normal;
   overflow-wrap: anywhere;
-  color: var(--mno-text-secondary);
 }
 
 /* 声優名セル */
 .mno-voice-name {
   font-weight: 600;
-  color: var(--mno-text-secondary);
+  color: #1f2937;
 }
 
 /* ボイス種別セル（ドット配置用） */
@@ -840,15 +793,15 @@ body.single,
   width: 12px;
   height: 12px;
   border-radius: 999px;
-  border: 2px solid var(--mno-border-strong);
+  border: 2px solid #d1d5db;
   background: transparent;
   transition: background 0.2s ease, border-color 0.2s ease;
 }
 
 /* 利用可能ドットの強調色 */
 .mno-voice-dot.is-active {
-  background: var(--mno-accent);
-  border-color: var(--mno-accent);
+  background: #f38ad5;
+  border-color: #f38ad5;
 }
 
 /* スマホ専用のボイス表アコーディオン */
@@ -879,7 +832,7 @@ body.single,
   right: 0;
   height: 3px;
   border-radius: 999px;
-  background: linear-gradient(90deg, rgba(200, 164, 77, 0.4), rgba(200, 164, 77, 0.12));
+  background: linear-gradient(90deg, #e5e7eb, #d1d5db);
 }
 
 /* 各レベルのステップカード */
@@ -899,21 +852,21 @@ body.single,
   width: 12px;
   height: 12px;
   border-radius: 999px;
-  border: 3px solid var(--mno-border-strong);
-  background: var(--mno-dark-card);
+  border: 3px solid #cbd5f5;
+  background: #ffffff;
   transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
 
 .mno-level-dot.is-active {
-  background: var(--mno-accent);
-  border-color: var(--mno-accent);
+  background: #f38ad5;
+  border-color: #f38ad5;
   transform: scale(1.1);
 }
 
 .mno-level-label {
   font-weight: 600;
-        font-size: 0.85rem;
-  color: var(--mno-text-secondary);
+	font-size: 0.85rem;
+  color: #0f172a;
 }
 
 @media (min-width: 768px) {
@@ -988,26 +941,26 @@ body.single,
     display: none;
   }
 
-.mno-voice-mobile {
-  display: block;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 0;
-  background: transparent;
-  overflow: hidden;
-}
+  .mno-voice-mobile {
+    display: block;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    background: #ffffff;
+    overflow: hidden;
+  }
 
     /* アコーディオン見出し（タップ領域を広く確保） */
-  .mno-voice-mobile summary {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 12px;
-  padding: 16px;
-  font-weight: 600;
-  color: var(--mno-text-primary);
-  cursor: pointer;
-  list-style: none;
-}
+    .mno-voice-mobile summary {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 16px;
+    font-weight: 600;
+    color: #0f172a;
+    cursor: pointer;
+    list-style: none;
+  }
 
     /* デフォルトの三角アイコンを非表示 */
     .mno-voice-mobile summary::-webkit-details-marker {
@@ -1015,18 +968,18 @@ body.single,
   }
 
     /* 開閉アイコン（矢印） */
-  .mno-voice-mobile summary::after {
-  content: "";
-  width: 12px;
-  height: 12px;
-  border: 2px solid var(--mno-accent);
-  border-top: none;
-  border-right: none;
-  transform: rotate(-45deg);
-  transition: transform 0.3s ease;
-  margin-left: 12px;
-  flex-shrink: 0;
-}
+    .mno-voice-mobile summary::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border: 2px solid #cbd5f5;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+    transition: transform 0.3s ease;
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
 
     /* 開閉時の矢印回転 */
     .mno-voice-mobile[open] summary::after {
@@ -1034,23 +987,23 @@ body.single,
   }
 
     /* 声優名表示 */
-  .mno-voice-mobile__name {
-  font-size: 1rem;
-  color: var(--mno-text-secondary);
-}
+    .mno-voice-mobile__name {
+    font-size: 1rem;
+    color: #111827;
+  }
 
     /* 対応ボイス種別の一覧 */
-  .mno-voice-mobile__types {
-  margin-left: auto;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 4px;
-  font-size: 0.9rem;
-  color: var(--mno-text-meta);
-  text-align: right;
-}
+    .mno-voice-mobile__types {
+    margin-left: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    font-size: 0.9rem;
+    color: #4b5563;
+    text-align: right;
+  }
 
     /* 種別テキストの行 */
     .mno-voice-mobile__type-item {
@@ -1085,13 +1038,13 @@ body.single,
   }
 
     /* 各ボイス項目の行 */
-  .mno-voice-mobile__item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--mno-border);
-}
+    .mno-voice-mobile__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f3f4f6;
+  }
 
     /* 最終行の罫線除去 */
     .mno-voice-mobile__item:last-child {
@@ -1106,10 +1059,10 @@ body.single,
   }
 
     /* ボイス種別ラベル */
-  .mno-voice-mobile__label {
-  font-size: 0.95rem;
-  color: var(--mno-text-secondary);
-}
+    .mno-voice-mobile__label {
+    font-size: 0.95rem;
+    color: #1f2937;
+  }
 }
 
 
@@ -1198,8 +1151,8 @@ html, body {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 0;
-  box-shadow: none;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.4);
 }
 
 /* ライトボックス開閉時に背面スクロールを止める */
