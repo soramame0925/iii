@@ -32,10 +32,10 @@ add_action('wp_enqueue_scripts', function(){
   // 投稿ページ
   if ( is_single() ) {
     wp_enqueue_style(
-      'mno-single',
-      get_template_directory_uri() . '/assets/css/single.css',
+      'mno-single-mobile',
+      get_template_directory_uri() . '/assets/css/pages/single-mobile.css',
       [],
-      filemtime(get_template_directory() . '/assets/css/single.css')
+      filemtime(get_template_directory() . '/assets/css/pages/single-mobile.css')
     );
   }
 
