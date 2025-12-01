@@ -424,12 +424,13 @@ body.single .mno-pm-price {
 }
 
 body.single .mno-pm-track-list__item {
-  background: transparent !important;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  margin: 8px 0;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
+  padding: 16px 18px;
+  margin: 0;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 /* PC表示用：購入エリアを横並びに変更 */
