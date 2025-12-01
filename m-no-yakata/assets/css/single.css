@@ -1167,32 +1167,57 @@ body.mno-gallery-lightbox-open {
 }
 
 /* =========================================
-   投稿ページ専用：本文フォント最適化（スマホ）
+   投稿ページ専用：モバイルファーストの統一タイポグラフィ
    ========================================= */
 
-@media screen and (max-width: 768px) {
+/* ベーステキスト（モバイル基準でわずかに小さく、やや太め） */
+.mno-single,
+.mno-single__content,
+.mno-single article,
+.mno-single section,
+.mno-single p,
+.mno-single li,
+.mno-single dd,
+.mno-single dt,
+.mno-single td,
+.mno-single th,
+.mno-single span,
+.mno-single a {
+  font-size: 15px;
+  line-height: 1.65;
+  font-weight: 600;
+  font-family: inherit;
+}
 
-  /* 本文テキスト（段落や通常テキスト） */
-  .mno-single,
-  .mno-single p,
-  .mno-pm-article,
-  .mno-pm-article p {
-    font-size: 15px;
-    line-height: 1.7;
-    font-weight: 500; /* 細すぎる文字を改善 */
-  }
+/* 見出し階層（コンパクトかつ強弱を明確に） */
+.mno-single h1,
+.mno-single .mno-single-title {
+  font-size: 1.55rem;
+  line-height: 1.25;
+  font-weight: 800;
+}
 
-  /* リスト要素も揃える（段落より少し小さい） */
-  .mno-single li,
-  .mno-pm-article li {
-    font-size: 15px;
-    line-height: 1.7;
-    font-weight: 500;
-  }
+.mno-single h2 {
+  font-size: 1.35rem;
+  line-height: 1.3;
+  font-weight: 700;
+}
 
-  /* 強調文字（太字） */
-  .mno-single strong,
-  .mno-pm-article strong {
-    font-weight: 600;
-  }
+.mno-single h3 {
+  font-size: 1.1rem;
+  line-height: 1.35;
+  font-weight: 650;
+}
+
+/* 強調テキスト（ベースより明確に強く） */
+.mno-single strong,
+.mno-single b {
+  font-weight: 700;
+}
+
+/* 段落・リストの読みやすさを統一 */
+.mno-single p,
+.mno-single li {
+  margin: 0;
+  line-height: 1.7;
 }
