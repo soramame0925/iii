@@ -39,7 +39,7 @@ body.single,
 /* 記事セクション全体グリッド（スマホ縦並びレイアウト） */
 .mno-pm-article {
   display: grid;
-  gap: 32px;
+  gap: 16px;
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -394,6 +394,42 @@ body.single,
   cursor: not-allowed;
   box-shadow: none;
   background: #9ca3af;
+}
+
+/* カード風スタイルの除去（シングルページのみ反映） */
+body.single .mno-pm-article__section {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 12px 0;
+}
+
+body.single .mno-pm-article {
+  gap: 12px;
+}
+
+body.single .mno-pm-slider,
+body.single .mno-gallery {
+  border-radius: 0;
+}
+
+body.single .mno-pm-price {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 8px 0 !important;
+}
+
+body.single .mno-pm-track-list__item {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 8px 0;
 }
 
 /* PC表示用：購入エリアを横並びに変更 */
