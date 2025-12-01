@@ -1,0 +1,269 @@
+.mno-pm-meta {
+  display: grid;
+  gap: 24px;
+}
+
+.mno-pm-meta__section {
+  background: #fff;
+  border: 1px solid #dcdcde;
+  padding: 16px;
+}
+
+.mno-pm-meta__section h3 {
+  margin-top: 0;
+}
+
+.mno-pm-meta__section--grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.mno-pm-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.mno-pm-gallery__item {
+  position: relative;
+  width: 120px;
+  border: 1px solid #dcdcde;
+  background: #f6f7f7;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.mno-pm-gallery__preview img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.mno-pm-gallery__remove {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  line-height: 1;
+  padding: 0 6px;
+}
+
+.mno-pm-gallery__handle {
+  cursor: move;
+  align-self: flex-start;
+}
+
+.mno-pm-gallery__placeholder {
+  border: 2px dashed #007cba;
+  width: 120px;
+  height: 120px;
+}
+
+.mno-pm-repeater__rows {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mno-pm-repeater__row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mno-pm-repeater__row--dialogue {
+  align-items: flex-start;
+  padding: 12px;
+  border: 1px solid #dcdcde;
+  background: #f6f7f7;
+}
+
+.mno-pm-dialogue-block {
+  display: grid;
+  gap: 16px;
+}
+
+.mno-pm-dialogue-block__label {
+  display: inline-block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #1d2327;
+}
+
+.mno-pm-dialogue-block__image-select {
+  display: grid;
+  gap: 8px;
+}
+
+.mno-pm-dialogue-block__image-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.mno-pm-dialogue-block__image-option {
+  border: 1px solid #dcdcde;
+  background: #f6f7f7;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 160px;
+}
+
+.mno-pm-dialogue-block__image-option input {
+  margin-right: 6px;
+}
+
+.mno-pm-dialogue-block__image-thumb img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+.mno-pm-dialogue-block__repeater {
+  display: grid;
+  gap: 8px;
+}
+
+.mno-pm-repeater__row textarea.widefat {
+  min-height: 80px;
+}
+
+.mno-pm-repeater__handle {
+  cursor: move;
+}
+
+.mno-pm-repeater__row .button {
+  flex-shrink: 0;
+}
+
+.mno-pm-repeater__row .widefat {
+  flex: 1;
+}
+
+.mno-pm-repeater__row--track {
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 12px;
+  border: 1px solid #dcdcde;
+  background: #f6f7f7;
+  gap: 16px;
+}
+
+.mno-pm-track-fields {
+  display: grid;
+  gap: 12px;
+  flex: 1 1 260px;
+  min-width: 0;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.mno-pm-track-fields__label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mno-pm-track-fields__count .mno-pm-track-fields__label {
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.mno-pm-track-fields__count .mno-pm-track-fields__label .mno-pm-track-fields__label-text {
+  min-width: 88px;
+}
+
+.mno-pm-track-fields__label-text {
+  font-weight: 600;
+}
+
+.mno-pm-track-fields__count-suffix {
+  font-size: 0.9em;
+  color: #50575e;
+}
+
+.mno-pm-track-fields__genres {
+  grid-column: 1 / -1;
+}
+
+.mno-pm-track-fields__count .small-text {
+  width: 80px;
+}
+
+.mno-pm-repeater__placeholder {
+  border: 2px dashed #007cba;
+  height: 48px;
+}
+
+.mno-pm-repeater--textarea .mno-pm-repeater__placeholder {
+  height: 120px;
+}
+
+.mno-pm-repeater--dialogue .mno-pm-repeater__placeholder {
+  height: 140px;
+}
+
+.mno-pm-meta--data .mno-pm-repeater__row--data,
+.mno-pm-meta--data .mno-pm-repeater__row--voice {
+  align-items: flex-start;
+  padding: 12px;
+  border: 1px solid #dcdcde;
+  background: #f6f7f7;
+}
+
+.mno-data-fields {
+  display: grid;
+  gap: 12px;
+  flex: 1 1 260px;
+  min-width: 0;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.mno-data-fields label,
+.mno-voice-fields > label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mno-voice-fields {
+  display: grid;
+  gap: 12px;
+  flex: 1 1 300px;
+  min-width: 0;
+}
+
+.mno-voice-checkboxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 8px 12px;
+}
+
+.mno-voice-checkboxes label {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 13px;
+  line-height: 1.4;
+  white-space: normal;
+}
+
+.mno-level-fields {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.mno-level-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+}
