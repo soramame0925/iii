@@ -64,16 +64,20 @@ body.single,
   overflow-x: hidden;
 }
 
-/* 各セクションカード（スマホでのカード状表示と影） */
+/* 投稿ページ：カード枠を廃止してフラット化 */
 .mno-pm-article__section {
-  background: var(--mno-dark-card);
-  border-radius: 12px;
+  background: transparent;
+  border-radius: 0;
   padding: 24px;
-  box-shadow: var(--mno-shadow);
-  border: 1px solid var(--mno-border);
+  box-shadow: none;
+  border: none;
   max-width: 100%;
   overflow-x: hidden;
          box-sizing: border-box;
+}
+
+.mno-pm-article__section + .mno-pm-article__section {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* ダークテーマ用：本文とリストの可読性を向上 */
@@ -112,10 +116,10 @@ body.single,
 .mno-pm-article__voice audio {
   width: 100%;
   border: none;
-  border-radius: 12px;
-  background: var(--mno-dark-panel);
+  border-radius: 0;
+  background: transparent;
   color: var(--mno-text-primary);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+  box-shadow: none;
   min-height: 140px;
 }
 
@@ -127,9 +131,9 @@ body.single,
   border: none;
   display: block;
   margin: 0 auto 20px;
-  border-radius: 8px;
-  background: var(--mno-dark-panel);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 /* ギャラリー・スライダー枠（スマホでも角丸を保ったカルーセル） */
@@ -137,7 +141,7 @@ body.single,
 .mno-gallery {
   position: relative;
   overflow: hidden;
-  border-radius: 16px;
+  border-radius: 0;
 }
 
 /* スワイプ可能なトラック（タッチ操作向けスクロールスナップ） */
@@ -177,6 +181,7 @@ body.single,
   height: auto;
   display: block;
 　cursor: zoom-in;
+  border-radius: 0;
 }
 
 /* モーション軽減設定への配慮 */
@@ -199,9 +204,9 @@ body.single,
 
   .mno-pm-article__section.mno-pm-article__gallery .mno-gallery {
     width: 100vw;
-	margin-left: calc(50% - 50vw);
+        margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
-    border-radius: 6px;
+    border-radius: 0;
   }
 
   .mno-pm-article__section.mno-pm-article__gallery .mno-gallery-slide {
@@ -210,7 +215,7 @@ body.single,
 
   .mno-pm-article__section.mno-pm-article__gallery .mno-gallery img {
     width: 100vw;
-    border-radius: 6px;
+    border-radius: 0;
   }
 }
 
@@ -334,10 +339,10 @@ body.single,
   gap: 4px;
   padding: 14px 16px;
   margin: 0;
-  border-radius: 18px;
-  border: 1px solid var(--mno-border-strong);
-  background: linear-gradient(135deg, #1d1d1d, #242424);
-  box-shadow: var(--mno-shadow);
+  border-radius: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
   width: 100%;
 }
 
@@ -464,14 +469,18 @@ body.single,
 
 /* 各トラックの行カード（スマホで余白を確保） */
 .mno-pm-track-list__item {
-  background: var(--mno-dark-card);
-  border: 1px solid var(--mno-border);
-  border-radius: 12px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
   padding: 16px 18px;
   line-height: 1.7;
   display: grid;
   gap: 8px;
-  box-shadow: var(--mno-shadow);
+  box-shadow: none;
+}
+
+.mno-pm-track-list__item:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* トラック見出し行（スマホでラベルと値を横並び） */
@@ -572,11 +581,11 @@ body.single,
 .mno-dialogue-block {
   display: grid;
   gap: 16px;
-  background: var(--mno-dark-panel);
-  border-radius: 14px;
+  background: transparent;
+  border-radius: 0;
   padding: 24px;
-  box-shadow: var(--mno-shadow);
-        border: 1px solid var(--mno-border);
+  box-shadow: none;
+        border: none;
           overflow-x: hidden;
 }
 
@@ -585,7 +594,7 @@ body.single,
   width: 100%;
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 0;
   margin: 12px 0;
   object-fit: cover;
 }
@@ -637,10 +646,10 @@ body.single,
 }
 
 .mno-speech-text {
-  background: #202020;
+  background: transparent;
   border-left: 3px solid var(--mno-accent);
   padding: 12px 14px;
-  border-radius: 8px;
+  border-radius: 0;
   line-height: 1.9;
   color: var(--mno-text-primary);
 }
@@ -981,9 +990,9 @@ body.single,
 
 .mno-voice-mobile {
   display: block;
-  border: 1px solid var(--mno-border);
-  border-radius: 16px;
-  background: var(--mno-dark-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0;
+  background: transparent;
   overflow: hidden;
 }
 
@@ -1189,8 +1198,8 @@ html, body {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  border-radius: 0;
+  box-shadow: none;
 }
 
 /* ライトボックス開閉時に背面スクロールを止める */
