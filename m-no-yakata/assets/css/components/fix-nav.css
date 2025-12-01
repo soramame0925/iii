@@ -1,0 +1,47 @@
+/* ===== 下部固定ナビ（スマホ専用）===== */
+
+.mno-fix-nav {
+  display: none; /* デフォルトは非表示 */
+}
+
+@media screen and (max-width: 1024px) {
+  .mno-fix-nav {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    z-index: 1000;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .mno-fix-nav__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 8px 0;
+    list-style: none;
+  }
+
+  .mno-fix-nav__btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: #333;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .mno-fix-nav__btn span {
+    font-size: 11px;
+    margin-top: 2px;
+    color: #555;
+  }
+}
