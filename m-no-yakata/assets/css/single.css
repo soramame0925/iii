@@ -45,16 +45,9 @@ body.single-post .mno-pm-article {
 }
 
 body.single-post .mno-pm-article__section {
-  background-color: #181818;
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 9px;
   padding: 18px;
   box-sizing: border-box;
   width: 100%;
-}
-
-body.single-post .mno-pm-article__section + .mno-pm-article__section {
-  margin-top: 4px;
 }
 
 body.single-post .mno-title-block {
@@ -85,7 +78,6 @@ body.single-post h6 {
 body.single-post h2 {
   font-size: 1.1rem;
   padding-bottom: 6px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 body.single-post h3 {
@@ -137,8 +129,7 @@ body.single-post .mno-gallery {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
-  background: #181818;
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: transparent;
 }
 
 body.single-post .mno-pm-slider__track,
@@ -172,7 +163,7 @@ body.single-post .mno-gallery img {
   width: 100%;
   height: auto;
   object-fit: cover;
-  background: #0f0f0f;
+  background: transparent;
 }
 
 body.single-post .mno-pm-slider__nav,
@@ -183,8 +174,7 @@ body.single-post .mno-gallery-arrow {
   width: 38px;
   height: 38px;
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  background: rgba(24, 24, 24, 0.85);
+  background: rgba(18, 18, 18, 0.85);
   color: #e6e6e6;
   display: grid;
   place-items: center;
@@ -225,30 +215,29 @@ body.single-post .mno-gallery-dots button {
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
   padding: 0;
 }
 
 body.single-post .mno-pm-slider__dot.is-active,
 body.single-post .mno-gallery-dots button.slick-active {
   background: #a0144a;
-  border-color: #a0144a;
 }
 
 body.single-post .mno-pm-article__voice audio {
   width: 100%;
-  background: #1f1f1f;
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 8px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
 }
 
 body.single-post .mno-voice-sample iframe {
   width: 100%;
   height: auto;
   min-height: 210px;
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 10px;
+  border: none;
+  border-radius: 0;
 }
 
 body.single-post .mno-pm-article__purchase {
@@ -258,9 +247,9 @@ body.single-post .mno-pm-article__purchase {
 }
 
 body.single-post .mno-pm-price {
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 10px;
-  background: #181818;
+  border: none;
+  border-radius: 0;
+  background: transparent;
   padding: 16px;
   text-align: center;
   display: grid;
@@ -280,11 +269,11 @@ body.single-post .mno-pm-price__label {
   justify-content: center;
   gap: 6px;
   padding: 4px 10px;
-  border-radius: 999px;
-  background: rgba(160, 20, 74, 0.12);
+  border-radius: 0;
+  background: transparent;
   color: #e6e6e6;
   font-size: 0.82rem;
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  border: none;
 }
 
 body.single-post .mno-pm-price__normal {
@@ -340,18 +329,12 @@ body.single-post .mno-pm-article__section blockquote,
 body.single-post blockquote {
   margin: 0 0 16px;
   padding: 14px 16px;
-  background: #1f1f1f;
-  border-left: 4px solid #a0144a;
-  border-radius: 8px;
   color: #e0e0e0;
 }
 
 body.single-post .mno-data-section .mno-data-block,
 body.single-post .mno-data-section .mno-data-bar,
 body.single-post .mno-data-section .mno-voice-row {
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  background: #1a1a1a;
   padding: 12px;
 }
 
@@ -360,7 +343,7 @@ body.single-post .mno-data-section .mno-data-block {
 }
 
 body.single-post .mno-data-bar-track {
-  background: #0f0f0f;
+  background: #1a1a1a;
   border-radius: 6px;
   height: 8px;
   overflow: hidden;
@@ -388,8 +371,6 @@ body.single-post .mno-data-count {
 }
 
 body.single-post .mno-voice-chart {
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.07);
   overflow: hidden;
 }
 
@@ -401,13 +382,11 @@ body.single-post .mno-voice-row {
 }
 
 body.single-post .mno-voice-row--header {
-  background: #1f1f1f;
   color: #e6e6e6;
   font-weight: 700;
 }
 
 body.single-post .mno-voice-row + .mno-voice-row {
-  border-top: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 body.single-post .mno-pm-article__section ul,
@@ -445,9 +424,6 @@ body.single-post .related-posts article {
 }
 
 body.single-post .related-posts article {
-  background: #181818;
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 9px;
   padding: 16px;
 }
 
