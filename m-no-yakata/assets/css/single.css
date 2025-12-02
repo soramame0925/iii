@@ -31,7 +31,9 @@ body.single,
 /* 記事タイトル（スマホの読みやすさを意識したフォントサイズ） */
 .mno-single-title {
   text-align: left;
+  font-size: clamp(0.95rem, 4vw, 1.125rem);
   margin: 0;
+  line-height: 1.4;
 }
 
 /* 記事セクション全体グリッド（スマホ縦並びレイアウト） */
@@ -70,9 +72,11 @@ body.single,
 
 /* セクション見出し（スマホでも視認性を保つ左ライン） */
 .mno-pm-article__section h2 {
+  font-size: 1.4rem;
   margin-bottom: 16px;
   border-left: 4px solid #f38ad5;
   padding-left: 12px;
+  line-height: 1.3;
 }
 
 /* 音声プレイヤー（スマホ幅いっぱいにフィット） */
@@ -305,13 +309,16 @@ body.single,
 
 /* セール価格表示（スマホでも大きく強調） */
 .mno-pm-price__sale {
+  font-size: clamp(1.8rem, 6vw, 2.3rem);
   color: #dc2626;
+  font-weight: 700;
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
   justify-content: center;
   gap: 6px;
   margin: 0;
+  line-height: 1.1;
 }
 
 /* セールラベル（小さなピル型バッジ） */
@@ -323,10 +330,14 @@ body.single,
   color: #b91c1c;
   padding: 2px 12px;
   border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
 }
 
 /* 通常価格（スマホで折り返しても見やすい控えめ表示） */
 .mno-pm-price__normal {
+  font-size: 0.95rem;
   color: #9ca3af;
   text-decoration: line-through;
   margin: 0;
@@ -335,13 +346,18 @@ body.single,
 /* 通常価格のみ表示時の強調スタイル */
 .mno-pm-price__normal--only {
   text-decoration: none;
+  font-weight: 600;
   color: #111827;
+  font-size: 1.2rem;
 }
 
 /* セール終了文言（スマホで注意喚起する赤文字） */
 .mno-pm-price__end {
+  font-size: 0.9rem;
   color: #dc2626;
+  font-weight: 600;
   margin: 6px 0 0;
+  letter-spacing: 0.04em;
 }
 
 /* 購入ボタン（スマホ全幅で押しやすい） */
@@ -354,6 +370,8 @@ body.single,
   max-width: 100%;
   min-height: 48px;
   padding: 14px 18px;
+  font-size: 1rem;
+  font-weight: 700;
   border-radius: 14px;
   background: linear-gradient(135deg, #f38ad5, #6366f1);
   color: #fff;
@@ -455,6 +473,7 @@ body.single .mno-pm-track-list__item {
   border: none;
   border-radius: 0;
   padding: 16px 18px;
+  line-height: 1.7;
   display: grid;
   gap: 8px;
 }
@@ -477,6 +496,7 @@ body.single .mno-pm-track-list__item {
 /* ラベル部分（スマホでも改行しやすい太字ラベル） */
 .mno-pm-track-list__label,
 .mno-pm-track-list__count-label {
+  font-weight: 700;
   color: #111827;
   white-space: normal;
   overflow-wrap: anywhere;
@@ -491,6 +511,7 @@ body.single .mno-pm-track-list__item {
 
 /* ジャンルテキスト（スマホで少し大きめ） */
 .mno-pm-track-list__genres {
+  font-size: 0.95rem;
 }
 
 /* スマホ表示用：トラックカードのパディング微調整 */
@@ -514,6 +535,7 @@ body.single .mno-pm-track-list__item {
   padding: 0;
   display: grid;
   gap: 12px;
+  font-size: 1rem;
 }
 
 /* 項目行（スマホでラベルと値を横並び＆折り返し） */
@@ -521,11 +543,13 @@ body.single .mno-pm-track-list__item {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  line-height: 1.6;
 }
 
 /* 項目ラベル（スマホでも幅を確保） */
 .mno-pm-list li span {
   min-width: 110px;
+  font-weight: 600;
   color: #6b7280;
 }
 
@@ -549,6 +573,7 @@ body.single .mno-pm-track-list__item {
 /* ナンバリング行のラベル強調 */
 .mno-pm-list--numbered li span {
   min-width: auto;
+  font-weight: 600;
   color: #111827;
 }
 
@@ -576,6 +601,7 @@ body.single .mno-pm-track-list__item {
 /* セリフブロックのメインタイトル */
 .mno-dialogue-block h2 {
   margin: 0;
+  font-size: 1.4rem;
   color: #111827;
 }
 
@@ -583,6 +609,7 @@ body.single .mno-pm-track-list__item {
 .mno-dialogue-block__track-description {
   margin: 0;
   color: #374151;
+  line-height: 1.8;
 }
 
 /* トラックリスト */
@@ -603,12 +630,14 @@ body.single .mno-pm-track-list__item {
 
 .mno-dialogue-block__subheadings h3 {
   margin: 0;
+  font-size: 1.1rem;
   color: #111827;
 }
 
 /* セリフ本文 */
 .mno-dialogue-block__body {
   color: #111827;
+  line-height: 1.8;
 }
 
 .mno-dialogue-block__body p {
@@ -620,6 +649,7 @@ body.single .mno-pm-track-list__item {
   border-left: 3px solid #c7a5b0;
   padding: 12px 14px;
   border-radius: 8px;
+  line-height: 1.9;
 }
 
 /* データ表示セクション全体（スマホで縦並び） */
@@ -663,6 +693,7 @@ body.single .mno-pm-track-list__item {
 
 /* データブロックの見出し */
 .mno-data-block h3 {
+  font-size: 1.1rem;
   margin-bottom: 12px;
   color: #0f172a;
 }
@@ -695,6 +726,7 @@ body.single .mno-pm-track-list__item {
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
+  font-weight: 600;
   width: 100%;
   max-width: 100%;
 }
@@ -710,6 +742,7 @@ body.single .mno-pm-track-list__item {
   display: inline-flex;
   align-items: center;
   gap: 4px;
+  font-size: 0.85rem;
   padding: 2px 8px;
   border-radius: 999px;
   background: #eef2ff;
@@ -745,6 +778,8 @@ body.single .mno-pm-track-list__item {
 /* 数値表示（スマホで右寄せ） */
 .mno-data-count {
   grid-area: count;
+  font-size: 1rem;
+  font-weight: 700;
   color: #111827;
   text-align: right;
 }
@@ -771,11 +806,14 @@ body.single .mno-pm-track-list__item {
 
 /* ボイス表ヘッダー行 */
 .mno-voice-row--header {
+  font-weight: 700;
   color: #0f172a;
 }
 
 /* ボイス種別のヘッダーセル */
 .mno-voice-row--header .mno-voice-type {
+  font-size: 0.9rem;
+  line-height: 1.4;
   text-align: center;
   white-space: normal;
   overflow-wrap: anywhere;
@@ -783,6 +821,7 @@ body.single .mno-pm-track-list__item {
 
 /* 声優名セル */
 .mno-voice-name {
+  font-weight: 600;
   color: #1f2937;
 }
 
@@ -869,6 +908,8 @@ body.single .mno-pm-track-list__item {
 }
 
 .mno-level-label {
+  font-weight: 600;
+	font-size: 0.85rem;
   color: #0f172a;
 }
 
@@ -910,8 +951,8 @@ body.single .mno-pm-track-list__item {
   .mno-pm-list li span {
     min-width: 90px;
   }
-
-        .mno-level-chart {
+	
+	.mno-level-chart {
     gap: 8px;
     padding-top: 14px;
   }
@@ -920,6 +961,10 @@ body.single .mno-pm-track-list__item {
     width: 10px;
     height: 10px;
     border-width: 2px;
+  }
+
+  .mno-level-label {
+    font-size: 0.75rem;
   }
 
   .mno-voice-chart {
@@ -955,6 +1000,7 @@ body.single .mno-pm-track-list__item {
     justify-content: flex-start;
     gap: 12px;
     padding: 16px;
+    font-weight: 600;
     color: #0f172a;
     cursor: pointer;
     list-style: none;
@@ -986,6 +1032,7 @@ body.single .mno-pm-track-list__item {
 
     /* 声優名表示 */
     .mno-voice-mobile__name {
+    font-size: 1rem;
     color: #111827;
   }
 
@@ -997,6 +1044,7 @@ body.single .mno-pm-track-list__item {
     flex-direction: column;
     align-items: flex-end;
     gap: 4px;
+    font-size: 0.9rem;
     color: #4b5563;
     text-align: right;
   }
@@ -1004,6 +1052,7 @@ body.single .mno-pm-track-list__item {
     /* 種別テキストの行 */
     .mno-voice-mobile__type-item {
     display: block;
+    line-height: 1.4;
     color: inherit;
   }
 
@@ -1055,6 +1104,7 @@ body.single .mno-pm-track-list__item {
 
     /* ボイス種別ラベル */
     .mno-voice-mobile__label {
+    font-size: 0.95rem;
     color: #1f2937;
   }
 }
