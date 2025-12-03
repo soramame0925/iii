@@ -8,3 +8,29 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: m-no-yakata
 */
+
+/* ============================
+   Global Typography Settings
+   ============================ */
+
+:root {
+  --mno-font: "Noto Sans JP", sans-serif;
+  --mno-font-size-base: 17px; /* PC */
+  --mno-font-size-sp: 15px;   /* スマホ */
+  --mno-font-weight: 700;
+}
+
+body {
+  font-family: var(--mno-font);
+  font-size: var(--mno-font-size-base);
+  font-weight: var(--mno-font-weight);
+  line-height: 1.6;
+  color: #333;
+}
+
+@media (max-width: 1024px) {
+  body {
+    font-size: var(--mno-font-size-sp);
+    font-weight: var(--mno-font-weight);
+  }
+}

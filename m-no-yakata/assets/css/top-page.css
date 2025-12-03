@@ -13,9 +13,7 @@
 
 body {
   background: var(--mno-bg);
-  font-family: "Noto Sans JP", "Helvetica Neue", Arial, sans-serif;
   color: var(--mno-text);
-  line-height: 1.6;
   margin: 0;
 }
 
@@ -33,7 +31,6 @@ body {
 }
 .mno-sort select {
   padding: 4px 8px;
-  font-size: 13px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
@@ -115,12 +112,9 @@ body {
 .mno-footer {
   text-align: center;
   padding: 14px;
-  font-size: 13px;
   color: var(--mno-muted);
 }
 .mno-logo a {
   color: var(--mno-accent);
   text-decoration: none;
-  font-weight: 700;
-  font-size: 20px;
 }

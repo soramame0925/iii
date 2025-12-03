@@ -133,8 +133,6 @@ body.page-template-page-discover-php .mno-header {
   bottom: var(--nav-height);
   left: 0;
   width: 100%;
-  text-align: left;
-  font-size: 14px;
   background: rgba(0, 0, 0, 0.5);
   padding: 14px 12px calc(14px + env(safe-area-inset-bottom, 0px)) 12px;
   display: flex;
@@ -214,10 +212,7 @@ body.page-template-page-discover-php .mno-header {
   flex-direction: column;
   justify-content: space-evenly; /* ← 各行を均等配置（上下含めて整列） */
   gap: 0;                       /* ← 均等配置するのでgapは不要 */
-  line-height: 1.55;            /* ← 各行の内部行間だけ調整 */
   padding: 0 0;                 /* ← 外側の余白もリセット */
-  text-align: left;
-  font-size: 13.5px;
   word-break: break-word;
   overflow-y: auto;
   height: 100%;
@@ -233,7 +228,6 @@ body.page-template-page-discover-php .mno-header {
 
 .mno-meta-label {
   color: #ffd500;
-  font-weight: 600;
   min-width: 3.8em;
   display: inline-block;
   white-space: nowrap;
@@ -244,7 +238,6 @@ body.page-template-page-discover-php .mno-header {
   color: #fff;
   overflow: hidden;
   text-overflow: ellipsis;
-  line-height: 1.6;
 }
 
 

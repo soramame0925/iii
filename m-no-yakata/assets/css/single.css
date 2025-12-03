@@ -30,10 +30,7 @@ body.single,
 
 /* 記事タイトル（スマホの読みやすさを意識したフォントサイズ） */
 .mno-single-title {
-  text-align: left;
-  font-size: clamp(0.95rem, 4vw, 1.125rem);
   margin: 0;
-  line-height: 1.4;
 }
 
 /* 記事セクション全体グリッド（スマホ縦並びレイアウト） */
@@ -473,7 +470,6 @@ body.single .mno-pm-track-list__item {
   border: none;
   border-radius: 0;
   padding: 16px 18px;
-  line-height: 1.7;
   display: grid;
   gap: 8px;
 }
@@ -496,7 +492,6 @@ body.single .mno-pm-track-list__item {
 /* ラベル部分（スマホでも改行しやすい太字ラベル） */
 .mno-pm-track-list__label,
 .mno-pm-track-list__count-label {
-  font-weight: 700;
   color: #111827;
   white-space: normal;
   overflow-wrap: anywhere;
@@ -511,7 +506,6 @@ body.single .mno-pm-track-list__item {
 
 /* ジャンルテキスト（スマホで少し大きめ） */
 .mno-pm-track-list__genres {
-  font-size: 0.95rem;
 }
 
 /* スマホ表示用：トラックカードのパディング微調整 */
@@ -535,7 +529,6 @@ body.single .mno-pm-track-list__item {
   padding: 0;
   display: grid;
   gap: 12px;
-  font-size: 1rem;
 }
 
 /* 項目行（スマホでラベルと値を横並び＆折り返し） */
@@ -543,13 +536,11 @@ body.single .mno-pm-track-list__item {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  line-height: 1.6;
 }
 
 /* 項目ラベル（スマホでも幅を確保） */
 .mno-pm-list li span {
   min-width: 110px;
-  font-weight: 600;
   color: #6b7280;
 }
 
@@ -573,7 +564,6 @@ body.single .mno-pm-track-list__item {
 /* ナンバリング行のラベル強調 */
 .mno-pm-list--numbered li span {
   min-width: auto;
-  font-weight: 600;
   color: #111827;
 }
 
@@ -609,7 +599,6 @@ body.single .mno-pm-track-list__item {
 .mno-dialogue-block__track-description {
   margin: 0;
   color: #374151;
-  line-height: 1.8;
 }
 
 /* トラックリスト */
@@ -637,7 +626,6 @@ body.single .mno-pm-track-list__item {
 /* セリフ本文 */
 .mno-dialogue-block__body {
   color: #111827;
-  line-height: 1.8;
 }
 
 .mno-dialogue-block__body p {
@@ -649,7 +637,6 @@ body.single .mno-pm-track-list__item {
   border-left: 3px solid #c7a5b0;
   padding: 12px 14px;
   border-radius: 8px;
-  line-height: 1.9;
 }
 
 /* データ表示セクション全体（スマホで縦並び） */
@@ -726,7 +713,6 @@ body.single .mno-pm-track-list__item {
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
-  font-weight: 600;
   width: 100%;
   max-width: 100%;
 }
@@ -742,7 +728,6 @@ body.single .mno-pm-track-list__item {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  font-size: 0.85rem;
   padding: 2px 8px;
   border-radius: 999px;
   background: #eef2ff;
@@ -778,8 +763,6 @@ body.single .mno-pm-track-list__item {
 /* 数値表示（スマホで右寄せ） */
 .mno-data-count {
   grid-area: count;
-  font-size: 1rem;
-  font-weight: 700;
   color: #111827;
   text-align: right;
 }
@@ -806,14 +789,11 @@ body.single .mno-pm-track-list__item {
 
 /* ボイス表ヘッダー行 */
 .mno-voice-row--header {
-  font-weight: 700;
   color: #0f172a;
 }
 
 /* ボイス種別のヘッダーセル */
 .mno-voice-row--header .mno-voice-type {
-  font-size: 0.9rem;
-  line-height: 1.4;
   text-align: center;
   white-space: normal;
   overflow-wrap: anywhere;
@@ -821,7 +801,6 @@ body.single .mno-pm-track-list__item {
 
 /* 声優名セル */
 .mno-voice-name {
-  font-weight: 600;
   color: #1f2937;
 }
 
@@ -908,8 +887,6 @@ body.single .mno-pm-track-list__item {
 }
 
 .mno-level-label {
-  font-weight: 600;
-	font-size: 0.85rem;
   color: #0f172a;
 }
 
@@ -964,7 +941,6 @@ body.single .mno-pm-track-list__item {
   }
 
   .mno-level-label {
-    font-size: 0.75rem;
   }
 
   .mno-voice-chart {
@@ -1000,7 +976,6 @@ body.single .mno-pm-track-list__item {
     justify-content: flex-start;
     gap: 12px;
     padding: 16px;
-    font-weight: 600;
     color: #0f172a;
     cursor: pointer;
     list-style: none;
@@ -1032,7 +1007,6 @@ body.single .mno-pm-track-list__item {
 
     /* 声優名表示 */
     .mno-voice-mobile__name {
-    font-size: 1rem;
     color: #111827;
   }
 
@@ -1044,7 +1018,6 @@ body.single .mno-pm-track-list__item {
     flex-direction: column;
     align-items: flex-end;
     gap: 4px;
-    font-size: 0.9rem;
     color: #4b5563;
     text-align: right;
   }
@@ -1052,7 +1025,6 @@ body.single .mno-pm-track-list__item {
     /* 種別テキストの行 */
     .mno-voice-mobile__type-item {
     display: block;
-    line-height: 1.4;
     color: inherit;
   }
 
@@ -1104,7 +1076,6 @@ body.single .mno-pm-track-list__item {
 
     /* ボイス種別ラベル */
     .mno-voice-mobile__label {
-    font-size: 0.95rem;
     color: #1f2937;
   }
 }
