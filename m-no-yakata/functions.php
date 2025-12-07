@@ -1,13 +1,15 @@
 <?php
+
+add_action( 'wp_enqueue_scripts', function() {
+  wp_enqueue_style( 'child-style', get_stylesheet_uri(), [], wp_get_theme()->get('Version') );
+}, 11 );
+
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 /**
  * CSS読み込み
  */
 add_action('wp_enqueue_scripts', function(){
-
-  // 基本スタイル
-  wp_enqueue_style('mno-base', get_stylesheet_uri(), [], '1.0');
 
   // トップページ
   if ( is_page_template('page-top.php') ) {
