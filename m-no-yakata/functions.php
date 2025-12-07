@@ -5,73 +5,80 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 add_action( 'wp_enqueue_scripts', function() {
   $parent_style_handle = 'swell-style';
   $parent_theme        = wp_get_theme()->parent();
+  $child_theme         = wp_get_theme();
+  $child_style_handle  = 'mno-child-style';
 
+  $assets_uri  = get_stylesheet_directory_uri() . '/assets';
+  $assets_path = get_stylesheet_directory() . '/assets';
+
+  // 親テーマのスタイル（SWELL）を先に読み込む
   wp_enqueue_style(
     $parent_style_handle,
     get_template_directory_uri() . '/style.css',
     [],
-    $parent_theme ? $parent_theme->get( 'Version' ) : wp_get_theme()->get( 'Version' )
+    $parent_theme ? $parent_theme->get( 'Version' ) : $child_theme->get( 'Version' )
   );
 
+  // 子テーマの基本スタイル
   wp_enqueue_style(
-    'mno-child-style',
+    $child_style_handle,
     get_stylesheet_uri(),
     [ $parent_style_handle ],
-    wp_get_theme()->get( 'Version' )
+    $child_theme->get( 'Version' )
   );
 
-  // トップページ
+  // 共有スタイル
+  wp_enqueue_style(
+    'mno-fix-nav',
+    $assets_uri . '/css/components/fix-nav.css',
+    [ $child_style_handle ],
+    filemtime( $assets_path . '/css/components/fix-nav.css' )
+  );
+
+  // ページ毎のスタイル
   if ( is_page_template( 'page-top.php' ) ) {
     wp_enqueue_style(
       'mno-top',
-      get_template_directory_uri() . '/assets/css/top-page.css',
-      [ $parent_style_handle ],
-      filemtime( get_template_directory() . '/assets/css/top-page.css' )
+      $assets_uri . '/css/top-page.css',
+      [ $child_style_handle ],
+      filemtime( $assets_path . '/css/top-page.css' )
     );
   }
 
-  // Discoverページ
   if ( is_page_template( 'page-discover.php' ) ) {
     wp_enqueue_style(
       'mno-discover',
-      get_template_directory_uri() . '/assets/css/discover.css',
-      [ $parent_style_handle ],
-      filemtime( get_template_directory() . '/assets/css/discover.css' )
+      $assets_uri . '/css/discover.css',
+      [ $child_style_handle ],
+      filemtime( $assets_path . '/css/discover.css' )
     );
   }
 
-  // 投稿ページ
   if ( is_single() ) {
     wp_enqueue_style(
       'mno-single',
-      get_template_directory_uri() . '/assets/css/single.css',
-      [ $parent_style_handle ],
-      filemtime( get_template_directory() . '/assets/css/single.css' )
+      $assets_uri . '/css/single.css',
+      [ $child_style_handle ],
+      filemtime( $assets_path . '/css/single.css' )
     );
   }
 
-  // 固定下部ナビ
-  wp_enqueue_style(
-    'mno-fix-nav',
-    get_template_directory_uri() . '/assets/css/components/fix-nav.css',
-    [ $parent_style_handle ],
-    filemtime( get_template_directory() . '/assets/css/components/fix-nav.css' )
-  );
-
+  // 共通スクリプト
   wp_enqueue_script(
     'mno-no-zoom',
-    get_template_directory_uri() . '/assets/js/no-zoom.js',
+    $assets_uri . '/js/no-zoom.js',
     [],
-    filemtime( get_template_directory() . '/assets/js/no-zoom.js' ),
+    filemtime( $assets_path . '/js/no-zoom.js' ),
     true
   );
 
+  // Discoverページ用スクリプト
   if ( is_page_template( 'page-discover.php' ) ) {
     wp_enqueue_script(
       'mno-discover',
-      get_template_directory_uri() . '/assets/js/discover.js',
+      $assets_uri . '/js/discover.js',
       [],
-      filemtime( get_template_directory() . '/assets/js/discover.js' ),
+      filemtime( $assets_path . '/js/discover.js' ),
       true // フッターで読み込み
     );
   }
